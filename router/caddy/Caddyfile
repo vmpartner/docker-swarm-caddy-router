@@ -1,0 +1,18 @@
+http://s1.local {
+  proxy / s1_whoami {
+    transparent
+  }
+  log stdout
+}
+http://s2.local {
+  proxy / s2_whoami {
+    transparent
+  }
+  log stdout
+}
+http://portainer.local {
+  proxy / portainer:9000 {
+    transparent
+  }
+  log stdout
+}
